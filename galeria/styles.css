@@ -1,0 +1,70 @@
+.voltar>* {
+  display: inline-block;
+  font-size: 18px;
+  text-decoration: none;
+  color: gray;
+}
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+
+.gallery-item {
+  flex: 0 0 calc(33.33% - 10px);
+}
+
+.gallery-image {
+  width: 100%;
+  height: 300px;
+  transition: .3s;
+  object-fit: cover;
+  cursor: pointer;
+}
+
+.gallery-image:hover {
+  transform: scale(1.1);
+}
+
+.hide{
+  display: none;
+}
+.lightbox {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 100;
+}
+
+.lightbox-content{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+}
+
+.lightbox-image {
+  max-width: 800px;
+  object-fit: cover;
+}
+
+.lightbox-close{
+  position: absolute;
+  top: 1rem;
+  right: 2rem;
+  font-size: 2rem;
+  color: #fff;
+  border: 1px solid #fff;
+  padding: 0.1rem 0.3rem;
+  cursor: pointer;
+  transition: .4s;
+}
+.lightbox-close:hover{
+  background-color: #fff;
+  color: #000;
+}

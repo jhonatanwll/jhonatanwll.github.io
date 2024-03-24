@@ -1,0 +1,56 @@
+.voltar>* {
+  display: inline-block;
+  font-size: 18px;
+  text-decoration: none;
+  color: rgba(0, 0, 0, 0.3);
+}
+body{
+  font-family: Arial;
+  background-color: #f8f8f8;
+  text-align: center;
+  box-sizing: border-box;
+}
+.hide {
+  display: none;
+}
+
+#converterForm{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+label{
+  margin-bottom:0.5rem;
+  font-weight: bold;
+}
+textarea, pre{
+  width: 600px;
+  height: 200px;
+  padding: 0.6rem;
+  font-size: 1rem;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  resize: none;
+}
+pre{
+  height: auto;
+  margin: 1.5rem auto;
+  text-align: left;
+}
+button {
+  margin-top: .8rem;
+  padding: .6rem;
+  font-size: 1rem;
+  color: #fff;
+  background-color: #007bff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.4s;
+}
+button:hover {
+  background-color: #0069d9;
+}

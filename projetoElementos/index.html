@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title class="hide">Qual é o meu elemento?</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="scripts.js" defer></script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="voltar">
+            <i class="fa-solid fa-arrow-left"></i>
+            <a href="../index.html">
+                <h4>Voltar</h4>
+            </a>
+        </div>
+        <div class="center-items">
+            <h1>QUAL É O MEU ELEMENTO?</h1>
+            <p>Escolha o seu mês de nascimento e descubra o elemento com o qual nasceu.</p>
+            <label for="month-select">Selecione o seu mês:</label>
+            <select name="month-select" id="month-select">
+                <option value="1">Janeiro</option>
+                <option value="2">Fevereiro</option>
+                <option value="3">Março</option>
+                <option value="4">Abril</option>
+                <option value="5">Maio</option>
+                <option value="6">Junho</option>
+                <option value="7">Julho</option>
+                <option value="8">Agosto</option>
+                <option value="9">Setembro</option>
+                <option value="10">Outubro</option>
+                <option value="11">Novembro</option>
+                <option value="12">Dezembro</option>
+            </select>
+            <div class="button">
+                <button id="descobrir-btn"><h3>Descobrir meu Elemento</h3></button>
+            </div>
+            <div class="hide output-group">
+                <label for="output">Você nasceu no... </label>
+                <input type="text" id="output" readonly />
+                <div id="message">
+                    <h2>SIGNIFICADO</h2>
+                    <p id="message-p"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

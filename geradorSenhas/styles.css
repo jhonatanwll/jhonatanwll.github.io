@@ -1,0 +1,11 @@
+.voltar>* {
+  display: inline-block;
+  font-family: "Montserrat", sans-serif;
+  font-size: 18px;
+  text-decoration: none;
+  color: rgba(0, 0, 0, 0.3);
+}
+
+* {
+  font-family: "Montserrat", sans-serif;
+}
