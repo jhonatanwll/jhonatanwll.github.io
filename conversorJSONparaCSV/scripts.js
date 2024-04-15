@@ -1,0 +1,98 @@
+// ------- Seleção de elementos -------
+const converterForm = document.querySelector("#converterForm")
+const converterInput = document.querySelector("#converterInput")
+const jsonToCsvBtn = document.querySelector("#jsonToCsvBtn")
+const csvToJsonBtn = document.querySelector("#csvToJsonBtn")
+const copyJsonBtn = document.querySelector("#copyJson")
+
+// ------- Funções -------
+function jsonToCsv(json) {
+    const headers = Object.keys(json[0])
+    const csvRows = []
+
+    csvRows.push(headers.join(","));
+
+    console.log(csvRows)
+
+    for (const row of json) {
+        const values = headers.map((header) => {
+            let value = row[header];
+
+
+            if (value === null || value === undefined) {
+                value = ""
+            } else if (typeof value === "object") {
+                value = JSON.stringify(value)
+            }
+            return value
+        })
+        csvRows.push(values.join(","))
+    }
+    return csvRows.join("\n")
+}
+function downloadCsv(csv) {
+    const downloadLink = document.createElement("a")
+    downloadLink.setAttribute("href", "data:text/csv;charset=utf-8," + encodeURIComponent(csv))
+    downloadLink.setAttribute("download", "data.csv")
+    downloadLink.style.display = "none";
+    document.body.appendChild(downloadLink)
+    downloadLink.click()
+    document.body.remove(downloadLink)
+
+}
+
+function csvToJson(csv){
+    const lines = csv.split("\n")
+    const headers =lines[0].split(",")
+    const json = []
+
+    for(let i = 1; i < lines.length; i++){
+        const values = lines[i].split(",")
+        const row = {}
+
+        for(let j=0; j< headers.length; j++){
+            let value = values[j]
+
+            if(value[0]=== "{" || value[0]==="["){
+                value = JSON.parse(value)
+            }
+            row[headers[j]] = value;
+        }
+        json.push(row)
+    }
+    return json;
+}
+
+function displayJson(json){
+    const resultArea = document.createElement("pre")
+
+    resultArea.textContent = JSON.stringify(json, null, 2)
+    document.body.appendChild(resultArea)
+}
+function copiarJson(json){
+    navigator.clipboard.writeText(JSON.stringify(json, null, 2)).then(() => {
+        alert(`JSON copiado para a área de transferência!`)
+    },
+    (err) => {
+        console.log("Erro ao copiar JSON.")
+    })
+}
+
+// ------- Eventos -------
+jsonToCsvBtn.addEventListener("click", function () {
+    const json = JSON.parse(converterInput.value.trim())
+    const csv = jsonToCsv(json);
+    downloadCsv(csv)
+})
+
+csvToJsonBtn.addEventListener("click", function()  {
+    const csv = converterInput.value.trim();
+    const json = csvToJson(csv)
+    displayJson(json)
+    copyJsonBtn.classList.remove("hide")
+})
+copyJsonBtn.addEventListener("click",function(){
+    const csv = converterInput.value.trim();
+    const json = csvToJson(csv)
+    copiarJson(json)
+})

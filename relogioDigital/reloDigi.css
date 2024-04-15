@@ -1,0 +1,43 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.voltar > * {
+    display: inline-block;
+    justify-content: center;
+    font-size: 18px;
+    text-decoration: none;
+    margin-top: 3rem;
+    margin-left: 3rem;
+    color: #fff;
+}
+
+body {
+    background-color: #333;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.container {
+    height: 100vh;
+    width: 100%;
+    padding-top: 5rem;
+    display: flex;
+    justify-content: center;
+}
+.clock{
+    font-size: 3rem;
+    font-weight: 700;
+    color: #FFF;
+    text-align: center;
+    border: 2px solid #fff;
+    border-radius: 1rem;
+    padding: 1rem 2rem;
+    height: 3rem;
+    display: flex;
+    align-items: center;
+}
+
+.clock span {
+    margin-right: 0.5rem;   
+}

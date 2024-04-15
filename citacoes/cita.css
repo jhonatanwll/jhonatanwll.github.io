@@ -1,0 +1,44 @@
+.voltar>* {
+  display: inline-block;
+  font-size: 18px;
+  text-decoration: none;
+  color: white;
+}
+
+body {
+  background-color:cadetblue;
+  padding-top: 2rem;
+}
+
+.quote {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.6rem;
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 1.5rem;
+  border: 2px solid white;
+  color: black;
+border-radius: 0.4rem;
+}
+
+.quote .text{
+  font-style: italic;
+  color: white;
+}
+.quote .author {
+  font-weight: bold;
+  color: yellow;
+}
+.button {
+  font-size: 1.4rem;
+  background-color: rgb(255, 184, 53);
+  color: black;
+  cursor: pointer;
+  border-radius: 5px;
+  padding: 0.8rem 1.2rem;
+  transform: .4s;
+}
+.button:hover {
+  background-color: yellow ;
+}

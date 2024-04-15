@@ -1,0 +1,143 @@
+/* Estilo geral */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+}
+
+.container {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  text-align: center;
+  color: #333;
+}
+
+/* Estilo do formulário */
+.form {
+  margin-bottom: 20px;
+}
+
+.form-control {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.input-field {
+  flex: 1 1 auto;
+  margin-right: 10px;
+}
+
+#nome-input {
+  width: 60%;
+}
+
+#valor-input {
+  width: 35%;
+}
+
+.enviar-btn {
+  flex: 0 0 auto;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.enviar-btn:hover {
+  background-color: #0056b3;
+}
+
+/* Estilo da lista de itens */
+.items-container {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  visibility: hidden;
+  overflow: hidden;
+}
+
+.items-list {
+  flex-basis: 48%;
+  padding: 15px;
+  background-color: #f9f9f9;
+  border-radius: 5px;
+}
+
+.items-list h4 {
+  margin: 0;
+  color: #333;
+}
+
+.limpar-btn {
+  padding: 5px 10px;
+  background-color: #dc3545;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.limpar-btn:hover {
+  background-color: #c82333;
+}
+
+/* Estilo do botão voltar */
+.voltar {
+  margin-bottom: 20px;
+}
+
+.fa-arrow-left {
+  margin-right: 5px;
+}
+
+/* Estilo dos totais */
+#totals {
+  margin-top: 20px;
+  background-color: #f9f9f9;
+  padding: 15px;
+  border-radius: 5px;
+}
+
+#total-each {
+  margin-bottom: 10px;
+}
+
+#total-geral {
+  margin-top: 10px;
+  color: #333;
+}
+
+/* Estilo do alerta */
+.alerta {
+  color: red;
+  margin-top: 10px;
+}
+
+.totalPessoa1 {
+  visibility: hidden;
+  overflow: hidden;
+}
+
+.totalPessoa0 {
+  visibility: hidden;
+  overflow: hidden;
+}
+.show {
+  visibility: visible;
+  overflow: visible;
+}

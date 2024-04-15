@@ -1,0 +1,49 @@
+.voltar>* {
+  display: inline-block;
+  font-size: 18px;
+  text-decoration: none;
+  color: rgba(0, 0, 0, 0.3);
+}
+
+* {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+h1 {
+  text-align: center;
+}
+
+.container {
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+input {
+  padding: .4rem;
+  font-size: 1rem;
+  width: 100%;
+  box-sizing: border-box;
+  margin-bottom: .6rem;
+}
+button {
+  padding: .8rem;
+  font-size: 1rem;
+  background-color: #4caf50;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  transition: 0.4s;
+  cursor: pointer;
+}
+button:hover {
+  background-color: #3e8e41;
+}
+#resultado {
+  font-size: 1.5rem;
+  margin-top: 2rem;
+}
